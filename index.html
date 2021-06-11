@@ -10,6 +10,30 @@
     <link rel="stylesheet" href="./css/animate.min.css" />
     <link rel="stylesheet" href="./css/ionicons.min.css" />
     <link rel="stylesheet" href="./css/styles.css" />
+	    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/integration
+            emailjs.init('user_gkEnLjrwsYk81bVUrA0hx');
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+				// generate a five digit number for the contact_number variable
+                this.contact_number.value = Math.random() * 100000 | 0;
+                // these IDs from the previous steps
+                emailjs.sendForm('service_q6f0xm9', 'template_z1bvteh', this)
+                    .then(function() {
+                        console.log('SUCCESS!');
+						alert("Thank you! \n Your order request is submitted! \n If we do not get back to you within 3 days, please follow up.");
+                    }, function(error) {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
   </head>
   <body>
     <nav id="topNav" class="navbar navbar-default navbar-fixed-top">
@@ -278,31 +302,32 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="margin-top-0 wow fadeIn">Get in Touch</h2>
+                    <h2 class="margin-top-0 wow fadeIn">Place an order</h2>
                     <hr class="primary">
-                    <p>We love feedback. Fill out the form below and we'll get back to you as soon as possible.</p>
+                    <p>We're accepting orders! Fill out the form below and we'll get back to you as soon as possible.</p>
                 </div>
                 <div class="col-lg-10 col-lg-offset-1 text-center">
-                    <form class="contact-form row">
+                    <form class="contact-form row" id="contact-form">
+						<input type="hidden" name="contact_number">
                         <div class="col-md-4">
                             <label></label>
-                            <input type="text" class="form-control" placeholder="Name">
+                            <input type="text" class="form-control" placeholder="Name" name="user_name">
                         </div>
                         <div class="col-md-4">
                             <label></label>
-                            <input type="text" class="form-control" placeholder="Email">
+                            <input type="email" class="form-control" placeholder="Email" name="user_email">
                         </div>
                         <div class="col-md-4">
                             <label></label>
-                            <input type="text" class="form-control" placeholder="Phone">
+                            <input type="text" class="form-control" placeholder="Phone" name ="phone">
                         </div>
                         <div class="col-md-12">
                             <label></label>
-                            <textarea class="form-control" rows="9" placeholder="Your message here.."></textarea>
+                            <textarea name="message" class="form-control" rows="9" placeholder="Your message here.. e.g I want two pieces, location is Downtown Dubai"></textarea>
                         </div>
                         <div class="col-md-4 col-md-offset-4">
                             <label></label>
-                            <button type="button" data-toggle="modal" data-target="#alertModal" class="btn btn-primary btn-block btn-lg">Send <i class="ion-android-arrow-forward"></i></button>
+                            <input type="submit" class="btn btn-primary btn-block btn-lg" value="Send"/>
                         </div>
                     </form>
                 </div>
@@ -351,7 +376,7 @@
                 </div>
             </div>
             <br/>
-            <span class="pull-right text-muted small"><a href="http://www.bootstrapzero.com">Landing Zero by BootstrapZero</a> ©2015 Company</span>
+            <span class="pull-right text-muted small">MedKit Supplies AE ©2021</span>
         </div>
     </footer>
     <div id="galleryModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
@@ -371,35 +396,21 @@
         <div class="modal-dialog">
         <div class="modal-content">
         	<div class="modal-body">
-        		<h2 class="text-center">Landing Zero Theme</h2>
+        		<h2 class="text-center">Medical Kit UAE</h2>
         		<h5 class="text-center">
-        		    A free, responsive landing page theme built by BootstrapZero.
+        		    The best supply company for medical students in UAE.
         		</h5>
         		<p class="text-justify">
-        		    This is a single-page Bootstrap template with a sleek dark/grey color scheme, accent color and smooth scrolling.
-        		    There are vertical content sections with subtle animations that are activated when scrolled into view using the jQuery WOW plugin. There is also a gallery with modals
-        		    that work nicely to showcase your work portfolio. Other features include a contact form, email subscribe form, multi-column footer. Uses Questrial Google Font and Ionicons.
+        		    We're committed to improving educational supplies in the UAE. By directly working with students and understanding their needs, we provide the most convenient and highest quality of items for students. If there are any issues, we will refund you and collect the product free of cost. Please submit the form or contact us at the below email.
         		</p>
-        		<p class="text-center"><a href="http://www.bootstrapzero.com">Download at BootstrapZero</a></p>
+        		<p class="text-center"><a href="mailto:medkitsupplies@gmail.com?subject=Order for medical kits">medkitsupplies@gmail.com</a></p>
         		<br/>
         		<button class="btn btn-primary btn-lg center-block" data-dismiss="modal" aria-hidden="true"> OK </button>
         	</div>
         </div>
         </div>
     </div>
-    <div id="alertModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog modal-sm">
-        <div class="modal-content">
-        	<div class="modal-body">
-        		<h2 class="text-center">Nice Job!</h2>
-        		<p class="text-center">You clicked the button, but it doesn't actually go anywhere because this is only a demo.</p>
-        		<p class="text-center"><a href="http://www.bootstrapzero.com">Learn more at BootstrapZero</a></p>
-        		<br/>
-        		<button class="btn btn-primary btn-lg center-block" data-dismiss="modal" aria-hidden="true">OK <i class="ion-android-close"></i></button>
-        	</div>
-        </div>
-        </div>
-    </div>
+ 
     <!--scripts loaded here -->
     <script src="./js/jquery.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
