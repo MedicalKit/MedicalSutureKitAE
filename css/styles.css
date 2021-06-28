@@ -181,7 +181,7 @@ footer {
 
 #last {
 	background: #17215f;
-	background: linear-gradient(to right, #17215f, #33AEFF);
+	background: linear-gradient(to right,#927b7b, #e2c6c6);
 }
 
 @media(min-width:768px) {
