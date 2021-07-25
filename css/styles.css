@@ -338,6 +338,7 @@ footer {
         margin-right: auto;
         margin-left: auto;
         max-width: 1000px;
+		padding-top:120px;
     }
 
     header .header-content .inner h1 {
