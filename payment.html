@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Medical Suture Kit Supply in UAE</title>
+    <meta name="description" content="Order now! Get your own complete medical suture kit and practice at home! Easy to order and get quick delivery! NOTE: ITS DURABLE AND LONG LASTING!" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Medical Suture Kit">
+	<meta property="og:site_name" content="Medical Suture Kit">
+	<meta property="og:title" content="Medical Suture Kit" />
+	<meta property="og:url" content="https://medicalkit.github.io/MedicalSutureKitAE/" />
+	<meta property="og:description" content="Order now! Get your own complete medical suture kit and practice at home! Easy to order and get quick delivery! NOTE: ITS DURABLE AND LONG LASTING!" />
+	<meta property="og:image" content="https://raw.githubusercontent.com/MedicalKit/MedicalSutureKitAE/main/assets/cover.JPG">
+	<meta property="og:type" content="website" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/animate.min.css" />
+    <link rel="stylesheet" href="./css/ionicons.min.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+
+	
+	<link rel="icon" href="./assets/favicon.ico" type="image/gif" sizes="16x16">
+	    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/integration
+            emailjs.init('user_gkEnLjrwsYk81bVUrA0hx');
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+				// generate a five digit number for the contact_number variable
+                this.contact_number.value = Math.random() * 100000 | 0;
+                // these IDs from the previous steps
+                emailjs.sendForm('service_q6f0xm9', 'template_z1bvteh', this)
+                    .then(function() {
+                        console.log('SUCCESS!');
+						alert("Thank you! \n Your order request is submitted! \n If we do not get back to you within 3 days, please follow up.");
+                    }, function(error) {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
+	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  </head>
+  <body>
+    <nav id="topNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="#first"><ion-icon name="fitness-outline"></ion-icon>Medical Suture Kit Supply</a>
+            </div>
+            <div class="navbar-collapse collapse" id="bs-navbar">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a class="page-scroll" href="#one">Intro</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#three">Gallery</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#four">Features</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#last">Order Now</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a class="page-scroll" style="color:green" href="https://api.whatsapp.com/send?phone=971566491595&text=Hi%20I%20would%20like%20to%20order%20a%20suture%20Kit!" target="_blank"><ion-icon name="logo-whatsapp"></ion-icon> WhatsApp</a>
+                    </li>
+					<li>
+						<a class="page-scroll" data-toggle="modal" title="A free Bootstrap video landing theme" href="#aboutModal">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+	<a href="https://api.whatsapp.com/send?phone=971566491595&text=Hi%20I%20would%20like%20to%20order%20a%20suture%20Kit!" class="float" target="_blank">
+	<i class="fa fa-whatsapp my-float"></i>
+	</a>
+	<div class="container" style="padding-top:150px;padding-bottom:250px;">
+		<h3>Make payment for one Suture Kit. Please Pay after the order has been confirmed via WhatsApp.</h3>
+		<br>
+		<div id="smart-button-container">
+      <div style="text-align: center;">
+        <div id="paypal-button-container"></div>
+      </div>
+    </div>
+  <script src="https://www.paypal.com/sdk/js?client-id=sb&enable-funding=venmo&currency=USD" data-sdk-integration-source="button-factory"></script>
+  <script>
+    function initPayPalButton() {
+      paypal.Buttons({
+        style: {
+          shape: 'rect',
+          color: 'gold',
+          layout: 'vertical',
+          label: 'paypal',
+          
+        },
+
+        createOrder: function(data, actions) {
+          return actions.order.create({
+            purchase_units: [{"description":"Suture Kit","amount":{"currency_code":"USD","value":37.8}}]
+          });
+        },
+
+        onApprove: function(data, actions) {
+          return actions.order.capture().then(function(orderData) {
+            
+            // Full available details
+            console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+
+            // Show a success message within this page, e.g.
+            const element = document.getElementById('paypal-button-container');
+            element.innerHTML = '';
+            element.innerHTML = '<h3>Thank you for your payment!</h3>';
+
+            // Or go to another URL:  actions.redirect('thank_you.html');
+            
+          });
+        },
+
+        onError: function(err) {
+          console.log(err);
+        }
+      }).render('#paypal-button-container');
+    }
+    initPayPalButton();
+  </script>
+	</div>
+    <footer id="footer">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-6 col-sm-3 column">
+                    <h4>Information</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="/payment.html">Payment</a></li>
+                        <li><a href="">Services</a></li>
+                        <li><a href="">Benefits</a></li>
+                        <li><a href="">Developers</a></li>
+                    </ul>
+                </div>
+                <div class="col-xs-6 col-sm-3 column">
+                    <h4>About</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Delivery Information</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms &amp; Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="col-xs-12 col-sm-3 column">
+                    <h4>Stay Posted</h4>
+                    <form>
+                        <div class="form-group">
+                          <input type="text" class="form-control" title="No spam, we promise!" placeholder="Tell us your email" disabled>
+                        </div>
+                        <div class="form-group">
+                          <button class="btn btn-primary" data-toggle="modal" data-target="#alertModal" type="button" disabled>Subscribe for updates</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-xs-12 col-sm-3 text-right">
+                    <h4>Follow</h4>
+                    <ul class="list-inline">
+                      <li><a rel="nofollow" href="" title="Twitter"><i class="icon-lg ion-social-twitter-outline"></i></a>&nbsp;</li>
+                      <li><a rel="nofollow" href="" title="Facebook"><i class="icon-lg ion-social-facebook-outline"></i></a>&nbsp;</li>
+               
+                    </ul>
+                </div>
+            </div>
+            <br/>
+            <span class="pull-right text-muted small">MedKit Supplies AE ©2021</span>
+        </div>
+    </footer>
+    <div id="galleryModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+        	<div class="modal-body">
+        		<img src="" id="galleryImage" class="img-responsive" />
+        		<p>
+        		    <br/>
+        		    <button class="btn btn-primary btn-lg center-block" data-dismiss="modal" aria-hidden="true">Close <i class="ion-android-close"></i></button>
+        		</p>
+        	</div>
+        </div>
+        </div>
+    </div>
+    <div id="aboutModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+        	<div class="modal-body">
+        		<h2 class="text-center">Medical Kit UAE</h2>
+        		<h5 class="text-center">
+        		    The best supply company for medical students in UAE.
+        		</h5>
+        		<p class="text-justify">
+        		    We're committed to improving educational supplies in the UAE. By directly working with students and understanding their needs, we provide the most convenient and highest quality of items for students. If there are any issues, we will refund you and collect the product free of cost. Please submit the form or contact us at the below WhatsApp or Email.
+        		</p>
+					<p class="text-center"><a href="https://api.whatsapp.com/send?phone=971566491595&text=Hi%20I%20would%20like%20to%20order%20a%20suture%20Kit!" target="_blank"><ion-icon name="logo-whatsapp"></ion-icon>
+					WhatsApp</a></p></p>
+        		<p class="text-center"><a href="mailto:medkitsupplies@gmail.com?subject=Order for medical kits">medkitsupplies@gmail.com</a></p>
+        		<br/>
+        		<button class="btn btn-primary btn-lg center-block" data-dismiss="modal" aria-hidden="true"> OK </button>
+        	</div>
+        </div>
+        </div>
+    </div>
+ 
+    <!--scripts loaded here -->
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/jquery.easing.min.js"></script>
+    <script src="./js/wow.js"></script>
+    <script src="./js/scripts.js"></script>
+  </body>
+</html>
